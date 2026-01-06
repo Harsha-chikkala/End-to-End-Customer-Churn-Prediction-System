@@ -1,0 +1,37 @@
+{
+  "target": "Churn",
+
+  "numerical_features": [
+    "tenure",
+    "MonthlyCharges"
+  ],
+
+  "categorical_features": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+
+  "derived_features": {
+    "numerical": ["service_count"],
+    "categorical": ["tenure_group", "has_internet"]
+  },
+
+  "excluded_features": [
+    "customerID",
+    "TotalCharges"
+  ]
+}
