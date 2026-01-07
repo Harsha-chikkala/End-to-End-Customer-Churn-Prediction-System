@@ -3,6 +3,9 @@ from sklearn.model_selection import train_test_split
 
 
 def load_data(csv_path: str) -> pd.DataFrame:
+    """
+    Load raw Telco churn dataset.
+    """
     df = pd.read_csv(csv_path)
     return df
 
@@ -13,6 +16,9 @@ def split_data(
     test_size: float = 0.2,
     random_state: int = 42
 ):
+    """
+    Split dataset into train and test sets.
+    """
     X = df.drop(columns=[target_col])
     y = df[target_col]
 
@@ -25,4 +31,3 @@ def split_data(
     )
 
     return X_train, X_test, y_train, y_test
-
